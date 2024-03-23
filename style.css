@@ -30,6 +30,7 @@ body {
   display: flex;
   gap: 50px;
 }
+
 .nav .nav-2 .nav-2-1 {
   margin-top: 15px;
   display: flex;
@@ -95,12 +96,17 @@ body {
 .page1 .rightside img {
   height: 400px;
   margin-top: 15%;
+  transition: 0.3s;
+}
+
+.page1 .rightside img:hover {
+  height: 500px;
+  margin-top: 15%;
 }
 
 .page1 .rightside {
   height: 80%;
   width: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,4 +118,308 @@ body {
   background-color: brown;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.list {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background-color: orange;
+  border-radius: 20px;
+  border: 2px solid white;
+  z-index: 99;
+  margin-bottom: 10%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.short-page-1 {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: azure;
+}
+
+.short-page-1 img {
+  height: 80px;
+  transition: 0.3s;
+}
+.short-page-1 .right,
+.short-page-1 .left {
+  height: 60px;
+}
+.short-page-1 .right:hover,
+.short-page-1 .left:hover {
+  height: 60px;
+}
+
+.short-page-1 img:hover {
+  height: 100px;
+}
+
+.page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(211, 199, 183);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.page2 .page-2-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.page2 .page-2-1 .card {
+  margin-top: 10%;
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: azure;
+  transition: 0.3s;
+}
+.page2 .page-2-1 .card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+}
+.page2 .page-2-1 .card:hover {
+  height: 250px;
+  width: 350px;
+}
+
+.page2 .page-2-2 {
+  margin-top: 5%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.page2 .page-2-2 .card-2 {
+  height: 200px;
+  width: 450px;
+  border-radius: 20px;
+  background-color: azure;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.page2 .page-2-2 .card-2:hover {
+  height: 250px;
+  width: 500px;
+}
+
+.card .rightside img {
+  height: 80px;
+}
+
+.card-2 .rightside img {
+  height: 100px;
+}
+
+.page2 .page-2-2 .card-2 .leftside button {
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  background-color: salmon;
+  margin-top: 20px;
+  font-size: large;
+  font-weight: 600;
+  color: white;
+}
+
+.short-page2 {
+  transition: 0.3s;
+}
+
+.short-page2 .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 200px;
+  height: 400px;
+  width: 100%;
+  background-color: rgb(140, 113, 113);
+}
+
+.short-page2 .container .leftside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.short-page2 .container .leftside .banner-1 {
+  position: absolute;
+  height: 450px;
+  z-index: 99;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.short-page2 .container .leftside .banner-2 {
+  position: absolute;
+  height: 410px;
+  margin-left: 250px;
+  border-radius: 10px;
+  z-index: 98;
+  transition: 0.3s;
+}
+
+.short-page2 .container .leftside .banner-1:hover {
+  height: 480px;
+}
+.short-page2 .container .leftside .banner-2:hover {
+  height: 440px;
+}
+
+.short-page2 .container .rightside {
+  height: 400px;
+  width: 50%;
+
+  justify-content: center;
+  align-items: center;
+}
+.short-page2 .container .rightside h1 {
+  margin-left: 50px;
+  margin-top: 20%;
+  color: white;
+  text-transform: uppercase;
+}
+
+.short-page2 .container .rightside .imgs {
+  width: 100%;
+  margin-left: 15%;
+}
+
+.short-page2 .container .rightside .imgs img {
+  height: 200px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.short-page2 .container .rightside .imgs img:hover {
+  height: 220px;
+}
+
+.page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(75, 68, 68);
+}
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
