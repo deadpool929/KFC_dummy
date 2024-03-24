@@ -1,18 +1,16 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("main"),
+  el: document.querySelector(".main"),
   smooth: true,
 
-  // for tablet smooth
   tablet: { smooth: true },
 
-  // for mobile
   smartphone: { smooth: true },
 });
 locoScroll.on("scroll", ScrollTrigger.update);
 
-ScrollTrigger.scrollerProxy("main", {
+ScrollTrigger.scrollerProxy(".main", {
   scrollTop(value) {
     return arguments.length
       ? locoScroll.scrollTo(value, 0, 0)
@@ -26,35 +24,96 @@ ScrollTrigger.scrollerProxy("main", {
       height: window.innerHeight,
     };
   },
-
-  // follwoing line is not required to work pinning on touch screen
-
-  /* pinType: document.querySelector(".smooth-scroll").style.transform
-    ? "transform"
-    : "fixed"*/
 });
 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 ScrollTrigger.refresh();
-
 let tl = gsap.timeline();
-tl.from(".nav-1, .nav-2-1 h3 ,.nav-2-2", {
+
+tl.from(".loader img", {
+  scale: 0,
+  duration: 2,
+});
+tl.to(".loader", {
+  y: -1500,
+  duration: 0.5,
+});
+
+tl.from(".page1 .nav .nav-1,.page1 .nav-2-1 h3 ,.page1 .nav-2-2", {
   y: -100,
   duration: 0.1,
   delay: 0.2,
   stagger: 0.3,
 });
-tl.from(" .leftside h1,.leftside p,.leftside button", {
-  x: -100,
-  opacity: 0,
-  duration: 0.4,
-  stagger: 0.5,
+tl.from(
+  ".page1 .section .leftside h1,.page1 .leftside p,.page1 .leftside button",
+  {
+    x: -100,
+    opacity: 0,
+    duration: 0.4,
+    stagger: 0.5,
+  }
+);
+
+tl.from(".page1 .section .rightside", {
+  scale: 0,
+
+  duration: 0.5,
+  delay: 0.2,
 });
 
-tl.from(".rightside img", {
+gsap.from(".page2 .page-2-1 .card ", {
+  opacity: 0,
+
+  delay: 0.2,
+  duration: 0.5,
+
+  scrollTrigger: {
+    trigger: ".page2",
+    scroller: ".main",
+
+    start: "top 30%",
+  },
+});
+gsap.from(".page2 .page-2-2 .card-2 ", {
+  opacity: 0,
+
+  delay: 0.2,
+  duration: 0.5,
+
+  scrollTrigger: {
+    trigger: ".page2",
+    scroller: ".main",
+
+    start: "top 20%",
+  },
+});
+
+gsap.from(".page3 h1 ", {
   scale: 0,
   opacity: 0,
   delay: 0.2,
+  duration: 1,
+
+  scrollTrigger: {
+    trigger: ".page3",
+    scroller: ".main",
+
+    start: "top 30%",
+  },
+});
+
+gsap.from(".page3 p", {
+  x: -100,
+  opacity: 0,
   duration: 0.5,
+  stagger: 0.5,
+
+  scrollTrigger: {
+    trigger: ".page3",
+    scroller: ".main",
+
+    start: "top 20%",
+  },
 });
